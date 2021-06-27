@@ -1,0 +1,47 @@
+.navbar{
+    overflow: hidden;
+    background-color: aliceblue;
+    border-color: aqua;
+    border-style: solid;
+}
+.navbar a{
+    float: right;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+.navbar a:hover{
+
+    background-color: black;
+    color: aliceblue;
+}
+.container{
+  display: flex;
+}
+.column{
+  flex: 1;
+  flex-direction: column;
+}
+.item{
+ flex-grow: 1;
+ padding: 10px;
+ margin: 10px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: aquamarine;
+}
+.column:first-child > :last-child, .column:last-child >  :first-child {
+  flex-grow: 2;
+}
+@media (max-width: 800px) {
+  .container{
+    flex-direction: column;
+  }
+  .column{
+    display: contents;
+  }
+}
+
